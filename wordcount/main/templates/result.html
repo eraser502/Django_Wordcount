@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+<h1>Result</h1>
+<!-- <a href= {% url 'main' %}>main</a> -->
+<button class="goMainPageButton" onClick="javascript:window.location.href='/ '">Main</button>
+<hr>
+<div class="container">
+<div class="resultTextBox">
+    String length: {{ original_length }}
+    <br>
+    Stirng length without spaces: {{ length_without_spaces }}
+    <hr>
+    {% for word, value in words %}
+        {{ word }} => {{ value }}&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if forloop.counter|divisibleby:3 %}
+            <br>
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+</body>
+<style>
+    body{
+        text-align: center;
+    }
+    .goMainPageButton{
+        font-size: 1.7rem;
+        color: black;
+        padding: 4px 28px 4px 28px;
+        border: none;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+</style>

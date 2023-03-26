@@ -1,0 +1,21 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+  <div class="container">
+    <h1>About</h1>
+    <hr class="titleUnderline" />
+    <div class="aboutContentBox">
+      This website functions to find the length of sentences with spaces, the
+      length of sentences with spaces removed, and the frequency of words.
+    </div>
+    <!-- <a href={% url 'main' %}>Main</a> -->
+    <button
+      class="goMainPageButton"
+      onClick="javascript:window.location.href='/ '"
+    >
+      Main
+    </button>
+  </div>
+</body>

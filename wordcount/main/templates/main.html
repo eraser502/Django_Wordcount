@@ -1,0 +1,17 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+  <h1>WordCount</h1>
+  <hr class="titleUnderline">
+  <form class="formBox" action={% url 'result' %} method="GET">
+    <textarea placeholder="Please enter to here!" class="textArea" name="text"></textarea>
+    <button class="submitButton" type="submit">submit</button>
+  </form>
+  <!-- <a href={% url 'about' %}>about</a> -->
+  <button class="goAboutButton" onClick="javascript:window.location.href='/about '">About</button>
+</body>
+<style>
+  
+</style>
